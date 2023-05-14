@@ -37,6 +37,7 @@
     <section class="container-fluid px-0">
       <div class="row align-items-center">
         <div class="col-lg-6">
+          <!--the div above splits the page into two halves with the left being the div above and the right half being the div below with the img-->
           <div id="headingGroup" class="text-white text-center d-none d-lg-block mt-5">
             <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h2>
             <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h2>
@@ -47,14 +48,74 @@
             <h1 class="">MUSEUM<span>/</span>OF<span>/</span>CANDY</h2>
           </div>
         </div>
-        <div id="removePad" class="col-lg-6">
+        <div class="col-lg-6">
           <img class="img-fluid" src="/imgs/hand2.png" alt="" />
         </div>
       </div>
     </section>
 
+    <section class="container-fluid px-0">
+      <div class="row align-items-center content">
+        <!--order is a class in bootstrap which positions things in orders here if its above md it will be first otherwise it will be ordered second-->
+        <div class="col-md-6 order-2 order-md-1">
+          <img class="img-fluid" src="/imgs/milk.png" alt="">
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+              <!--on ex small, small and medium it will be col 10 but large will be col 8-->
+              <h2>MUSEUM OF CANDY</h2>
+              <!--img class below makes the icon disappear unless it is shown on a wide screen which it then appears-->
+              <img class="d-none d-lg-inline" src="/imgs/lolli_icon.png" alt="">
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequatur quasi voluptates unde delectus neque perspiciatis nihil, possimus pariatur quae quos et sunt officia atque quod ut officiis error. Sunt!
+              Provident quae ipsa unde aspernatur ut vero, fugiat repudiandae odio illo, sapiente tempore in blanditiis architecto eveniet est ex. Eos consequuntur itaque libero quis!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center content">
+        <div class="col-md-6 text-center">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+              <h2>MUSEUM OF CANDY</h2>
+              <img class="d-none d-lg-inline" src="/imgs/lolli_icon.png" alt="">
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequatur quasi voluptates unde delectus neque perspiciatis nihil, possimus pariatur quae quos et sunt officia atque quod ut officiis error. Sunt!
+              Provident quae ipsa unde aspernatur ut vero, fugiat repudiandae odio illo, sapiente tempore in blanditiis architecto eveniet est ex. Eos consequuntur itaque libero quis!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img class="img-fluid" src="/imgs/gumball.png" alt="">
+        </div>
+      </div>
+      <div class="row align-items-center content">
+        <div class="col-md-6 order-2 order-md-1">
+          <img class="img-fluid" src="/imgs/sprinkles.png" alt="">
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+              <h2>MUSEUM OF CANDY</h2>
+              <img class="d-none d-lg-inline" src="/imgs/lolli_icon.png" alt="">
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis consequatur quasi voluptates unde delectus neque perspiciatis nihil, possimus pariatur quae quos et sunt officia atque quod ut officiis error. Sunt!
+              Provident quae ipsa unde aspernatur ut vero, fugiat repudiandae odio illo, sapiente tempore in blanditiis architecto eveniet est ex. Eos consequuntur itaque libero quis!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function (){
+        $(document).scroll(function(){
+          var $nav = $("#mainNavBar");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        })
+      })
+    </script>
   </body>
 </html>
